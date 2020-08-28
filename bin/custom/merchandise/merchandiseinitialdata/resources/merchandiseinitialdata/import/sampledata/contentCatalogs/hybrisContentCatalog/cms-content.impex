@@ -561,9 +561,9 @@ INSERT_UPDATE NavigationBarCollectionComponent; $contentCV[unique = true]; uid[u
                                               ;                          ; NavBarComponent   ; Navigation Bar Collection Component ; StuffBarComponent,ClothesBarComponent,BooksBarComponent ; NavBarComponent
 
 # Inser NavigationNode for Books
-#INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name        ; parent(uid, $contentCV); links(&linkRef)   ; &nodeRef
-#                               ; BooksNavNode      ;                          ; Books Links ; MerchandiseNavNode     ; BooksCategoryLink ; BooksNavNode
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name        ; parent(uid, $contentCV); links(&linkRef)   ; &nodeRef
+                               ; BooksNavNode      ;                          ; Books Links ; MerchandiseNavNode     ; BooksCategoryLink ; BooksNavNode
 
 # Assign Navigation Bar Component to NavigationNode for Books
-#INSERT_UPDATE NavigationBarComponent; $contentCV[unique = true]; uid[unique = true]; navigationNode(&nodeRef); dropDownLayout(code)
-#                                    ;                          ; BooksBarComponent ; BooksNavNode
+INSERT_UPDATE NavigationBarComponent; $contentCV[unique = true]; uid[unique = true]; navigationNode(&nodeRef); dropDownLayout(code)
+                                    ;                          ; BooksBarComponent ; BooksNavNode
