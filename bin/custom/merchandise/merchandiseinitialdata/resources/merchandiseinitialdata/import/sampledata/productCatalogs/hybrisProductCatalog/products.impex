@@ -38,3 +38,28 @@ INSERT_UPDATE Product; code[unique = true]; $supercategories; manufacturerName; 
                      ; 0213               ; 240             ; Springer  & Co  ; Springer  & Co-F-L ; pieces    ;
                      ; 0214               ; 240             ; Springer  & Co  ; Springer  & Co-F-L ; pieces    ;
                      ; 0215               ; 240             ; Springer  & Co  ; Springer  & Co-F-L ; pieces    ;
+
+# Impex for adding sample data alias for Books
+INSERT_UPDATE Product; code[unique = true]; $catalogVersion; unit(code); supercategories(code, $catalogVersion); varianttype(code); $approved; $taxGroup; ean        ; alias
+                     ; 0213               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for headFirstJava
+                     ; 0214               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for headFirstProgramming
+                     ; 0215               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for javascript
+
+
+# Impex for adding sample data
+INSERT_UPDATE ApparelProduct; code[unique = true]; $catalogVersion; unit(code); supercategories(code, $catalogVersion); varianttype(code); $approved; $taxGroup; ean        ; genders(code); alias
+                            ; 300441142          ;                ; pieces    ; Blue Tomato,caps                      ;                  ;          ;          ; 1022436212 ; MALE         ; alias for blue cap
+
+# Insert ApparelProduct Books
+INSERT_UPDATE ApparelProduct; code[unique = true]; $supercategories; manufacturerName; manufacturerAID    ; unit(code); ean; variantType(code); $catalogVersion; $approved; $taxGroup
+                            ; 0216               ; 240             ; Springer  & Co  ; Springer  & Co-F-L ; pieces    ;
+                            ; 0217               ; 240             ; Springer  & Co  ; Springer  & Co-F-L ; pieces    ;
+                            ; 0218               ; 240             ; Springer  & Co  ; Springer  & Co-F-L ; pieces    ;
+
+# Impex for adding sample data alias for Books
+INSERT_UPDATE ApparelProduct; code[unique = true]; $catalogVersion; unit(code); supercategories(code, $catalogVersion); varianttype(code); $approved; $taxGroup; ean        ; alias
+                            ; 0216               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for my headFirstJava
+                            ; 0217               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for my  headFirstProgramming
+                            ; 0218               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for my  javascript
+
+

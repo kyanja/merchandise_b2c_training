@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 27 août 2020 à 21:22:03                     ---
+ * --- Generated at 28 août 2020 à 17:58:15                     ---
  * ----------------------------------------------------------------
  */
 package org.merchandisebackoffice.jalo;

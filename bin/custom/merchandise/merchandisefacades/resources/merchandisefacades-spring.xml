@@ -182,4 +182,6 @@
 	</bean>
 
 	<bean id="genderData" class="de.hybris.merchandise.facades.product.data.GenderData" scope="prototype"/>
+
+
 </beans>

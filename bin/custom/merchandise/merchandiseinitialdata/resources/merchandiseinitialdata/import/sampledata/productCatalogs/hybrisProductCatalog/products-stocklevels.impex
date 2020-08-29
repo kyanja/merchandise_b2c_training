@@ -37,6 +37,11 @@ INSERT_UPDATE StockLevel; available; warehouse(code)[unique = true]; inStockStat
                         ; 400      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 0213                      ; 0
                         ; 200      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 0214                      ; 0
                         ; 300      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 0215                      ; 0
+                        ; 700      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 300441142                 ; 0
+                        ; 700      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 0216                      ; 0
+                        ; 700      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 0217                      ; 0
+                        ; 700      ; warehouse_springer            ; notSpecified       ; 0          ; -1                       ; 0          ; 0       ; 0218                      ; 0
+
 
 
 UPDATE Product; code[unique = true]; $catalogVersion; stockLevels(productCode, warehouse(code)); vendors(code)
@@ -65,3 +70,7 @@ UPDATE Product; code[unique = true]; $catalogVersion; stockLevels(productCode, w
               ; 0213               ;                ; 0213:warehouse_springer                  ; springer
               ; 0214               ;                ; 0214:warehouse_springer                  ; springer
               ; 0215               ;                ; 0215:warehouse_springer                  ; springer
+              ; 300441142          ;                ; 300441142:warehouse_springer             ; springer
+              ; 0216               ;                ; 0216:warehouse_springer                  ; springer
+              ; 0217               ;                ; 0217:warehouse_springer                  ; springer
+              ; 0218               ;                ; 0218:warehouse_springer                  ; springer

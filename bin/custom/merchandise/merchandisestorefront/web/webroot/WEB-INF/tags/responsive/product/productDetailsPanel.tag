@@ -22,6 +22,10 @@
 					<div class="product-details">
 						<product:productPromotionSection product="${product}"/>
 						<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
+							Alias : ${product.alias}
+							<h1>
+									${product.name}
+							</h1>
 							<product:productPricePanel product="${product}" />
 						</ycommerce:testId>
 						<div class="description">${ycommerce:sanitizeHTML(product.summary)}</div>
