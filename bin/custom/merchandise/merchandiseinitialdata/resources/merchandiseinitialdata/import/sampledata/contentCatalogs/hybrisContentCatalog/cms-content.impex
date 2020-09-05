@@ -535,3 +535,32 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
   
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='multiStepCheckoutSummaryPage'];contentSlot(uid,$contentCV)[unique=true]
 ;;Side-CheckoutSummary;SideContent;;SideContent-CheckoutSummary
+
+
+
+# Insert Category Pages for Books
+# Category Pages
+INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name  ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']; previewImage(code, $contentCV)
+                          ;                          ; Books             ; Books ; ProductListPageTemplate        ; false      ;                                           ;
+
+
+#Insert CMS Link Components for Books
+INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; name       ; url                           ; &linkRef          ; &componentRef     ; target(code)[default = 'sameWindow']; $category; $product;
+                              ;                          ; BooksCategoryLink ; Books Link ; /Hybris-Catalogue/Books/c/240 ; BooksCategoryLink ; BooksCategoryLink ;                                     ; 240      ;         ;
+
+# Inser Navigation Bar Component For Books
+INSERT_UPDATE NavigationBarComponent; $contentCV[unique = true]; uid[unique = true]; name              ; wrapAfter; link(uid, $contentCV); styleClass; &componentRef
+                                    ;                          ; BooksBarComponent ; BooksBarComponent ; 10       ; BooksCategoryLink    ;           ; BooksBarComponent
+
+
+# Inser Navigation Bar Component For Books in the Navigation Collection
+INSERT_UPDATE NavigationBarCollectionComponent; $contentCV[unique = true]; uid[unique = true]; name                                ; components(uid, $contentCV)                             ; &componentRef
+                                              ;                          ; NavBarComponent   ; Navigation Bar Collection Component ; StuffBarComponent,ClothesBarComponent,BooksBarComponent ; NavBarComponent
+
+# Inser NavigationNode for Books
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name        ; parent(uid, $contentCV); links(&linkRef)   ; &nodeRef
+                               ; BooksNavNode      ;                          ; Books Links ; MerchandiseNavNode     ; BooksCategoryLink ; BooksNavNode
+
+# Assign Navigation Bar Component to NavigationNode for Books
+INSERT_UPDATE NavigationBarComponent; $contentCV[unique = true]; uid[unique = true]; navigationNode(&nodeRef); dropDownLayout(code)
+                                    ;                          ; BooksBarComponent ; BooksNavNode
