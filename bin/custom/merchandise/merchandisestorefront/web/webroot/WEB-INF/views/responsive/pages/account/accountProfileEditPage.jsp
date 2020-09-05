@@ -27,6 +27,7 @@
                     <formElement:formInputBox idKey="profile.lastName" labelKey="profile.lastName" path="lastName" inputCSS="text" mandatory="true"/>
                     <formElement:formInputBox idKey="profile.EmailPreference" labelKey="profile.EmailPreference" path="EmailPreference" inputCSS="text" mandatory="true"/>
                     <formElement:formInputBox idKey="profile.CustomerPhoneNumber" labelKey="profile.CustomerPhoneNumber" path="CustomerPhoneNumber" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.alternativemail" labelKey="profile.alternativemail" path="alternativemail" inputCSS="text" mandatory="true"/>
 
                     <div class="row">
                         <div class="col-sm-6 col-sm-push-6">

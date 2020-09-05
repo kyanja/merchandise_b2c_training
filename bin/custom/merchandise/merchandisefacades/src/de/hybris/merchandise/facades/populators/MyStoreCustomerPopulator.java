@@ -15,6 +15,7 @@ public class MyStoreCustomerPopulator extends CustomerPopulator {
 
         target.setIsEmailNotificationEnabled(String.valueOf(source.getEmailPreference()));
         target.setCustomerPhoneNumberBean(source.getContactPhoneNumber());
+        target.setAlternativeEmailBean(source.getAlternativeEmail());
 
     }
 }

@@ -14,6 +14,7 @@ public class UpdateProfileForm
 	private String lastName;
 	private String EmailPreference;
 	private String CustomerPhoneNumber;
+    private String alternativemail;
 
 
 	/**
@@ -82,6 +83,14 @@ public class UpdateProfileForm
 
     public void setCustomerPhoneNumber(String customerPhoneNumber) {
         CustomerPhoneNumber = customerPhoneNumber;
+    }
+
+     public String getAlternativemail() {
+        return alternativemail;
+    }
+
+    public void setAlternativemail(String alternativemail) {
+        this.alternativemail = alternativemail;
     }
 
 }

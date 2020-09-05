@@ -17,7 +17,12 @@
           extends="de.hybris.platform.commercefacades.user.data.PrincipalData">
         <property name="isEmailNotificationEnabled" type="String"/>
         <property name="CustomerPhoneNumberBean" type="String"/>
+        <property name="alternativeEmailBean" type="String"/>
+    </bean>
 
+    <bean class="de.hybris.platform.commercefacades.user.data.RegisterData">
+        <property name="alternativeEmail" type="String"/>
+        <property name="customerPhoneNumber" type="String"/>
     </bean>
 
 </beans>
